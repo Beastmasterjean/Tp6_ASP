@@ -1,0 +1,58 @@
+﻿@model DetailsViewModel
+@{
+
+    ViewData["Title"] = "Details réservation";
+}
+
+<div>
+    <div class="row">
+        <div class="page-title">
+            <h2>Details de la réservation</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class = "col-md-5 d-none d-md-block">
+            <img src="https://image.shutterstock.com/image-vector/really-good-big-finger-image-260nw-498076033.jpg" alt="Good">
+        </div>                  
+        <div class="col-md-7">
+            <div class="page-title">
+                <h2>Réservation complétée avec succès</h2>
+            </div>
+
+            <div class="row details-row">
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.nom) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.nom)</div>
+            </div>
+            <div class="row details-row">
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.courriel) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.courriel)</div>
+            </div>
+            <div class="row details-row">
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.nbPersonne) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.nbPersonne)</div>
+            </div>
+            <div class="row details-row">
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.date) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.date)</div>
+            </div>
+            <div class="row details-row">
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.menuChoiceId) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.menuChoiceId)</div>
+            </div>
+            <div class="text-center">
+               Merci d'avoir utiliser notre module de réservation en ligne.
+               Au plaisir de vous voir bientôt
+            </div>
+            <div class="text-center">
+               L'équipe
+            </div>
+            <div class="links">
+                <a asp-controller="Home" asp-action="Index">Retour à la page d'accueil</a>
+            </div>
+        </div>
+    </div>>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

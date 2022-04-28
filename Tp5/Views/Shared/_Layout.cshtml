@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - travail5</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+    <link rel="stylesheet" href="~/css/site-bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!--
+        Section qui permet d'ajouter du contenu dans <head> à partir d'une vue
+        Voir la vue Contact/Index.cshtml pour un exemple.
+    -->
+    @await RenderSectionAsync("Links", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  bg-dark text-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <h1>RÉSERVATION EN LIGNE</h1>          
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top text-center bg-dark text-white footer">
+        <div class="container">
+            ASP.NET MVC - JeanLandreville
+        </div>
+    </footer>
+
+    <!-- Placé à la fin du document pour un chargement plus rapide des pages -->
+    <!-- Ordre : jQuery, Popper.js, puis Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!--
+        Section qui permet d'ajouter du JavaScript à partir d'une vue
+        Voir la vue Contact/Index.cshtml pour un exemple.
+    -->
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

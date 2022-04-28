@@ -1,0 +1,53 @@
+﻿@model ListReservationViewModel
+@{
+    ViewData["Title"] = "Liste des reservations";
+}
+
+<div id="product-list-page">
+    <div class="page-title">
+        <h2>Liste des reservations</h2>
+    </div>
+
+    <table class="table table-sm table-bordered table-striped table-hover">
+        <tr>
+            <!--
+    <th>Code</th>
+    <th>Nom du produit</th>
+    <th>Catégorie</th>
+    <th>Quantité en stock</th>
+    -->
+            <!-- Permet d'utiliser l'attribut Display(Name="...") de propriété du modèle -->
+            <!-- Permet de gérer l'affichage du modèle à un seul endroit -->
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].date)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].nom)</th>
+            <th class="d-none d-lg-block">@Html.DisplayNameFor(model => model.Reservations[0].courriel)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].nbPersonne)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].menuChoiceId)</th>
+            <th class="d-none d-md-block">Actions</th>
+        </tr>
+        @if (Model.Reservations.Length > 0)
+        {
+            foreach (Reservation reservation in Model.Reservations)
+
+            {
+    <tr>
+        <td>@Html.DisplayFor(model => reservation.date)</td>
+        <td>@Html.DisplayFor(model => reservation.nom)</td>
+        <td class="d-none d-lg-block" >@Html.DisplayFor(model => reservation.courriel)</td>
+        <td>@Html.DisplayFor(model => reservation.nbPersonne)</td>
+        <td>@Html.DisplayFor(model => reservation.menuChoiceId)</td>
+
+        <td>
+            <a asp-action="Delete" asp-route-id="@reservation.id" data-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
+        </td>
+    </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">Aucune reservation trouvée.</td>
+            </tr>
+        }
+    </table>
+</div>

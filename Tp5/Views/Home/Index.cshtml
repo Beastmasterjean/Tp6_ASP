@@ -1,0 +1,79 @@
+﻿@model ListViewModel
+@{
+
+    ViewData["Title"] = "Nouvelle réservation";
+}
+
+<div>
+    <div class="row">
+        <div class="page-title">
+            <h2>Ajout d'une réservation</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class = "col-md-5 d-none d-md-block">
+            <img src="https://food.fnr.sndimg.com/content/dam/images/food/products/2022/3/11/rx_goldbelly-clinton-street-diner-zeus-burger.jpg.rend.hgtvcom.406.305.suffix/1647019464547.jpeg" alt="Junk Food">
+        </div>
+            
+        <div class = "col-md-7">
+            <div class="form-section">
+                    <form asp-action="Create">
+                        <input type="hidden" asp-for="Reservation.id" />
+
+                        <div class="form-horizontal">
+                            <hr />
+                            <!--<div asp-validation-summary="ModelOnly" class="text-danger"></div>-->
+                            <div class="form-group row">
+                                <label asp-for="Reservation.nom" class="col-form-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="Reservation.nom" class="form-control" />
+                                    <span asp-validation-for="Reservation.nom" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Reservation.courriel" class="col-form-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">@@</span>
+                                        </div>
+                                        <input type="text" class="form-control" asp-for="Reservation.courriel">
+                                    </div>
+                                    <span asp-validation-for="Reservation.courriel" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Reservation.nbPersonne" class="col-form-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="Reservation.nbPersonne" id="spinner" />
+                                    <span asp-validation-for="Reservation.nbPersonne" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Reservation.date" class="col-form-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="Reservation.date" type="text" id="datepicker" />
+                                    <span asp-validation-for="Reservation.date" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Reservation.menuChoiceId" class="col-form-label col-md-3"></label>
+                                <div class="col-md-9">
+                                    <input asp-for="Reservation.menuChoiceId" id="spinner" />
+                                    <span asp-validation-for="Reservation.menuChoiceId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="Confirmer la réservation" class="btn btn-primary" />
+                        </div>
+                    </form>
+            </div>         
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

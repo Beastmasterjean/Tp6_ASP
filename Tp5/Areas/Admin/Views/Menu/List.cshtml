@@ -1,0 +1,43 @@
+﻿@model ListMenuViewModel
+@{
+    ViewData["Title"] = "Liste des menus";
+}
+
+<div id="product-list-page">
+    <div class="page-title">
+        <h2><i class="far fa-list-alt"></i>Liste des choix de menu</h2>
+    </div>
+
+    <table class="table table-sm table-bordered table-striped table-hover">
+        <tr>
+
+            <th>@Html.DisplayNameFor(model => model.Menus[0].nom)</th>
+            <th>Actions</th>
+        </tr>
+        @if (Model.Menus.Length > 0)
+        {
+            foreach (Menu menu in Model.Menus)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => menu.nom)</td>
+
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@menu.id" data-toggle="tooltip" title="Edit"><i class="fas fa-edit"></i></a>
+                        <a asp-action="Delete" asp-route-id="@menu.id" data-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="5">Aucun menu trouvé.</td>
+            </tr>
+        }
+    </table>
+    <a asp-action="Create" class="navbar-brand">Ajouter un choix de menu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+</div>
