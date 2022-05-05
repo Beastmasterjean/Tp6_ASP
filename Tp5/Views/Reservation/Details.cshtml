@@ -1,13 +1,13 @@
 ﻿@model DetailsViewModel
 @{
 
-    ViewData["Title"] = "Details réservation";
+    ViewData["Title"] = Resource.DetailsReservation;
 }
 
 <div>
     <div class="row">
         <div class="page-title">
-            <h2>Details de la réservation</h2>
+            <h2>Resource.DetailsReservation</h2>
         </div>
     </div>
     <div class="row">
@@ -16,7 +16,7 @@
         </div>                  
         <div class="col-md-7">
             <div class="page-title">
-                <h2>Réservation complétée avec succès</h2>
+                <h2>@Resource.DetailsReservationTitle</h2>
             </div>
 
             <div class="row details-row">
@@ -40,14 +40,14 @@
                 <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.MenuChoiceId)</div>
             </div>
             <div class="text-center">
-               Merci d'avoir utiliser notre module de réservation en ligne.
-               Au plaisir de vous voir bientôt
+               @Resource.ThanksMessage
+               @Resource.SeeYouSoon
             </div>
             <div class="text-center">
-               L'équipe
+               @Resource.Team
             </div>
             <div class="links">
-                <a asp-controller="Home" asp-action="Index">Retour à la page d'accueil</a>
+                <a asp-controller="Home" asp-action="Index">@Resource.ButtonReturnHome</a>
             </div>
         </div>
     </div>>

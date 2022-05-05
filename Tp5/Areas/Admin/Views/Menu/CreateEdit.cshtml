@@ -1,23 +1,23 @@
 ﻿@model CreateEditMenuViewModel
 @{
-    string textAction = "Ajouter";
     string formAction = "Create";
+    ViewData["Title"] = Resource.NewMenuAdminWeb;
 
     if (Model.Menu.id > 0)
     {
-        textAction = "Modifier";
         formAction = "Edit";
+        ViewData["Title"] = Resource.ModifMenuWeb;
     }
 
     //if(Model.Menu.id)
 
-    ViewData["Title"] = textAction + " un produit";
+
 }
 
 <div class="row">
     <div class="offset-md-1 offset-lg-2 col-md-10 col-lg-8">
         <div class="page-title">
-            <h2> <i class="far fa-list-alt"></i> @textAction un choix de menu</h2>
+            <h2> <i class="far fa-list-alt"></i> @Resource.NewMenuTitleAdmin</h2>
         </div>
 
         <div class="form-section">
@@ -38,13 +38,14 @@
                 <hr />
 
                 <div class="text-center">
-                    <input type="submit" value="@textAction" class="btn btn-primary" />
+                    @if(true) { }
+                    <input type="submit" value=@Resource.ButtonNewMenuChoice class="btn btn-primary" />
                 </div>
             </form>
         </div>
 
         <div class="links">
-            <a asp-action="List">Retour à la liste des choix de menu</a>
+            <a asp-action="List">@Resource.ButtonReturnToList</a>
         </div>
     </div>
 </div>

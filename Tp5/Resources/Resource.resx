@@ -123,6 +123,9 @@
   <data name="ButtonAdd" xml:space="preserve">
     <value>Ajouter</value>
   </data>
+  <data name="ButtonConfirmReservation" xml:space="preserve">
+    <value>Confirmer la réservation</value>
+  </data>
   <data name="ButtonDelete" xml:space="preserve">
     <value>Supprimer</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="ButtonNewMenuChoice" xml:space="preserve">
     <value>Ajouter un choix de menu</value>
+  </data>
+  <data name="ButtonReturnHome" xml:space="preserve">
+    <value>Retour à la page d'accueil</value>
   </data>
   <data name="ButtonReturnListReservation" xml:space="preserve">
     <value>Retour à la liste de réservations</value>
@@ -150,8 +156,17 @@
   <data name="DeleteReservationTitle" xml:space="preserve">
     <value>Supprimer une réservation</value>
   </data>
+  <data name="DetailsReservation" xml:space="preserve">
+    <value>Details de la réservation</value>
+  </data>
+  <data name="DetailsReservationTitle" xml:space="preserve">
+    <value>Réservation complétée avec succès</value>
+  </data>
   <data name="E-Mail" xml:space="preserve">
     <value>Courriel :</value>
+  </data>
+  <data name="HomeAdminText" xml:space="preserve">
+    <value>Allo Admin</value>
   </data>
   <data name="ListMenuAdminWeb" xml:space="preserve">
     <value>Liste des menus</value>
@@ -191,6 +206,15 @@
   </data>
   <data name="ReservationIndexAdmin" xml:space="preserve">
     <value>LES RÉSERVATIONS</value>
+  </data>
+  <data name="SeeYouSoon" xml:space="preserve">
+    <value>Au plaisir de vous voir bientôt</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>L'équipe</value>
+  </data>
+  <data name="ThanksMessage" xml:space="preserve">
+    <value>Merci d'avoir utiliser notre module de réservation en ligne.</value>
   </data>
   <data name="TitleListMenuAdmin" xml:space="preserve">
     <value>LES CHOIX DE MENU</value>
