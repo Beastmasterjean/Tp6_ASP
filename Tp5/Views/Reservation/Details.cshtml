@@ -1,13 +1,13 @@
 ﻿@model DetailsViewModel
 @{
 
-    ViewData["Title"] = Resource.DetailsReservation;
+    ViewData["Title"] = "Details réservation";
 }
 
 <div>
     <div class="row">
         <div class="page-title">
-            <h2>Resource.DetailsReservation</h2>
+            <h2>Details de la réservation</h2>
         </div>
     </div>
     <div class="row">
@@ -16,38 +16,38 @@
         </div>                  
         <div class="col-md-7">
             <div class="page-title">
-                <h2>@Resource.DetailsReservationTitle</h2>
+                <h2>Réservation complétée avec succès</h2>
             </div>
 
             <div class="row details-row">
-                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.Nom) : </div>
-                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.Nom)</div>
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.nom) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.nom)</div>
             </div>
             <div class="row details-row">
-                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.Courriel) : </div>
-                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.Courriel)</div>
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.courriel) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.courriel)</div>
             </div>
             <div class="row details-row">
-                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.NbPersonne) : </div>
-                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.NbPersonne)</div>
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.nbPersonne) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.nbPersonne)</div>
             </div>
             <div class="row details-row">
-                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.Date) : </div>
-                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.Date)</div>
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.date) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.date)</div>
             </div>
             <div class="row details-row">
-                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.MenuChoiceId) : </div>
-                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.MenuChoiceId)</div>
+                <div class="col-sm-6">@Html.DisplayNameFor(model => model.Reservation.menuChoiceId) : </div>
+                <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.menuChoiceId)</div>
             </div>
             <div class="text-center">
-               @Resource.ThanksMessage
-               @Resource.SeeYouSoon
+               Merci d'avoir utiliser notre module de réservation en ligne.
+               Au plaisir de vous voir bientôt
             </div>
             <div class="text-center">
-               @Resource.Team
+               L'équipe
             </div>
             <div class="links">
-                <a asp-controller="Home" asp-action="Index">@Resource.ButtonReturnHome</a>
+                <a asp-controller="Home" asp-action="Index">Retour à la page d'accueil</a>
             </div>
         </div>
     </div>>

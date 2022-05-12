@@ -33,7 +33,7 @@ namespace Tp5.Controllers
             {
                 DAL dal = new DAL();
 
-                Reservation existingReservation = dal.reservationFactory.Get(viewModel.Reservation.Id);
+                Reservation existingReservation = dal.reservationFactory.Get(viewModel.Reservation.id);
                 if (existingReservation != null)
                 {
                     // Il est possible d'ajouter une erreur personnalisée.

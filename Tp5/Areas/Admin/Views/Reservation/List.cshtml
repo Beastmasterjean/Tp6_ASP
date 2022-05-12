@@ -18,11 +18,11 @@
     -->
             <!-- Permet d'utiliser l'attribut Display(Name="...") de propriété du modèle -->
             <!-- Permet de gérer l'affichage du modèle à un seul endroit -->
-            <th>@Html.DisplayNameFor(model => model.Reservations[0].Date)</th>
-            <th>@Html.DisplayNameFor(model => model.Reservations[0].Nom)</th>
-            <th class="d-none d-lg-block">@Html.DisplayNameFor(model => model.Reservations[0].Courriel)</th>
-            <th>@Html.DisplayNameFor(model => model.Reservations[0].NbPersonne)</th>
-            <th>@Html.DisplayNameFor(model => model.Reservations[0].MenuChoiceId)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].date)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].nom)</th>
+            <th class="d-none d-lg-block">@Html.DisplayNameFor(model => model.Reservations[0].courriel)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].nbPersonne)</th>
+            <th>@Html.DisplayNameFor(model => model.Reservations[0].menuChoiceId)</th>
             <th class="d-none d-md-block">Actions</th>
         </tr>
         @if (Model.Reservations.Length > 0)
@@ -31,14 +31,14 @@
 
             {
     <tr>
-        <td>@Html.DisplayFor(model => reservation.Date)</td>
-        <td>@Html.DisplayFor(model => reservation.Nom)</td>
-        <td class="d-none d-lg-block" >@Html.DisplayFor(model => reservation.Courriel)</td>
-        <td>@Html.DisplayFor(model => reservation.NbPersonne)</td>
-        <td>@Html.DisplayFor(model => reservation.MenuChoiceId)</td>
+        <td>@Html.DisplayFor(model => reservation.date)</td>
+        <td>@Html.DisplayFor(model => reservation.nom)</td>
+        <td class="d-none d-lg-block" >@Html.DisplayFor(model => reservation.courriel)</td>
+        <td>@Html.DisplayFor(model => reservation.nbPersonne)</td>
+        <td>@Html.DisplayFor(model => reservation.menuChoiceId)</td>
 
         <td>
-            <a asp-action="Delete" asp-route-id="@reservation.Id" data-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
+            <a asp-action="Delete" asp-route-id="@reservation.id" data-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
         </td>
     </tr>
             }
