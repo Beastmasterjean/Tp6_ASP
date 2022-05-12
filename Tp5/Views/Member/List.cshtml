@@ -1,0 +1,37 @@
+﻿@model Member[]
+@{
+    ViewData["Title"] = Resource.MemberList;
+}
+
+<div id="account-list-page">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title">
+                <h2>@Resource.MemberList</h2>
+            </div>
+
+            <table class="table table-sm table-bordered table-striped table-hover">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model[0].Name)</th>
+                    <th>@Html.DisplayNameFor(model => model[0].Email)</th>
+                </tr>
+                @if (Model.Length > 0)
+                {
+                    foreach (Member member in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(model => member.Name)</td>
+                            <td>@Html.DisplayFor(model => member.Email)</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="2">@Resource.NoItemFound</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

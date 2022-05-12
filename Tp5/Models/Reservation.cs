@@ -8,14 +8,14 @@ namespace Tp5.Models
 {
     public class Reservation
     {
-        public int id { get; set; }
-        public int nbPersonne { get; set; }
-        public int menuChoiceId { get; set; }
+        public int Id { get; set; }
+        public int NbPersonne { get; set; }
+        public int MenuChoiceId { get; set; }
         [Required]
-        public string nom { get; set; }
+        public string Nom { get; set; }
         [Required]
-        public string courriel { get; set; }
-        public DateTime date { get; set; }
+        public string Courriel { get; set; }
+        public DateTime Date { get; set; }
 
         public Reservation()
         {
@@ -23,12 +23,12 @@ namespace Tp5.Models
         }
         public Reservation(int id, int nbPersonne, int menuChoiceId, string nom, string courriel, DateTime date)
         {
-            this.id = id;
-            this.nbPersonne = nbPersonne;
-            this.menuChoiceId = menuChoiceId;
-            this.nom = nom;
-            this.courriel = courriel;
-            this.date = date;
+            this.Id = id;
+            this.NbPersonne = nbPersonne;
+            this.MenuChoiceId = menuChoiceId;
+            this.Nom = nom;
+            this.Courriel = courriel;
+            this.Date = date;
         }
     }
 }

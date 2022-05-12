@@ -10,6 +10,7 @@ namespace Tp5.DataAccessLayer
     {
         private MenuFactory _menuFactory = null;
         private ReservationFactory _reservationFactory = null;
+        private MemberFactory _memberFactory = null;
         public static string ConnectionString { get; set; }
 
         public MenuFactory MenuFactory
@@ -33,6 +34,18 @@ namespace Tp5.DataAccessLayer
                     _reservationFactory = new ReservationFactory();
                 }
                 return _reservationFactory;
+            }
+        }
+
+        public MemberFactory memberFactory
+        {
+            get
+            {
+                if (_memberFactory == null)
+                {
+                    _memberFactory = new MemberFactory();
+                }
+                return _memberFactory;
             }
         }
 

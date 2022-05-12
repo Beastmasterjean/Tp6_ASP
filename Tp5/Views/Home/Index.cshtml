@@ -18,49 +18,49 @@
         <div class = "col-md-7">
             <div class="form-section">
                     <form asp-action="Create">
-                        <input type="hidden" asp-for="Reservation.id" />
+                        <input type="hidden" asp-for="Reservation.Id" />
 
                         <div class="form-horizontal">
                             <hr />
                             <!--<div asp-validation-summary="ModelOnly" class="text-danger"></div>-->
                             <div class="form-group row">
-                                <label asp-for="Reservation.nom" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.Nom" class="col-form-label col-md-3"></label>
                                 <div class="col-md-9">
-                                    <input asp-for="Reservation.nom" class="form-control" />
-                                    <span asp-validation-for="Reservation.nom" class="text-danger"></span>
+                                    <input asp-for="Reservation.Nom" class="form-control" />
+                                    <span asp-validation-for="Reservation.Nom" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.courriel" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.Courriel" class="col-form-label col-md-3"></label>
                                 <div class="col-md-9">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">@@</span>
                                         </div>
-                                        <input type="text" class="form-control" asp-for="Reservation.courriel">
+                                        <input type="text" class="form-control" asp-for="Reservation.Courriel">
                                     </div>
-                                    <span asp-validation-for="Reservation.courriel" class="text-danger"></span>
+                                    <span asp-validation-for="Reservation.Courriel" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.nbPersonne" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.NbPersonne" class="col-form-label col-md-3"></label>
                                 <div class="col-md-9">
-                                    <input asp-for="Reservation.nbPersonne" id="spinner" />
-                                    <span asp-validation-for="Reservation.nbPersonne" class="text-danger"></span>
+                                    <input asp-for="Reservation.NbPersonne" id="spinner" />
+                                    <span asp-validation-for="Reservation.NbPersonne" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.date" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.Date" class="col-form-label col-md-3"></label>
                                 <div class="col-md-9">
-                                    <input asp-for="Reservation.date" type="text" id="datepicker" />
-                                    <span asp-validation-for="Reservation.date" class="text-danger"></span>
+                                    <input asp-for="Reservation.Date" type="text" id="datepicker" />
+                                    <span asp-validation-for="Reservation.Date" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.menuChoiceId" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.MenuChoiceId" class="col-form-label col-md-3"></label>
                                 <div class="col-md-9">
-                                    <input asp-for="Reservation.menuChoiceId" id="spinner" />
-                                    <span asp-validation-for="Reservation.menuChoiceId" class="text-danger"></span>
+                                    <input asp-for="Reservation.MenuChoiceId" id="spinner" />
+                                    <span asp-validation-for="Reservation.MenuChoiceId" class="text-danger"></span>
                                 </div>
                             </div>
                             <hr />

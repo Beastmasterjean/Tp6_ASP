@@ -95,7 +95,7 @@ namespace Tp5.DataAccessLayer.Factories
                 mySqlCnn.Open();
 
                 MySqlCommand mySqlCmd = mySqlCnn.CreateCommand();
-                if (reservation.id == 0)
+                if (reservation.Id == 0)
                 {
                     // On sait que c'est un nouveau produit avec Id == 0,
                     // car c'est ce que nous avons affecter dans la fonction CreateEmpty().
@@ -108,23 +108,23 @@ namespace Tp5.DataAccessLayer.Factories
                                            "SET Id=@Id, Nom=@Nom, Courriel=@Courriel, NbPersonne=@NbPersonne, DateReservation=@DateReservation, MenuChoiceId=@MenuChoiceId," +
                                            "WHERE Id=@Id";
 
-                    mySqlCmd.Parameters.AddWithValue("@Id", reservation.id);
+                    mySqlCmd.Parameters.AddWithValue("@Id", reservation.Id);
                 }
 
-                mySqlCmd.Parameters.AddWithValue("@Id", reservation.id);
-                mySqlCmd.Parameters.AddWithValue("@Nom", reservation.nom.Trim());
-                mySqlCmd.Parameters.AddWithValue("@Courriel", reservation.courriel.Trim());
-                mySqlCmd.Parameters.AddWithValue("@NbPersonne", reservation.nbPersonne);
-                mySqlCmd.Parameters.AddWithValue("@DateReservation", reservation.date);
-                mySqlCmd.Parameters.AddWithValue("@MenuChoiceId", reservation.menuChoiceId);
+                mySqlCmd.Parameters.AddWithValue("@Id", reservation.Id);
+                mySqlCmd.Parameters.AddWithValue("@Nom", reservation.Nom.Trim());
+                mySqlCmd.Parameters.AddWithValue("@Courriel", reservation.Courriel.Trim());
+                mySqlCmd.Parameters.AddWithValue("@NbPersonne", reservation.NbPersonne);
+                mySqlCmd.Parameters.AddWithValue("@DateReservation", reservation.Date);
+                mySqlCmd.Parameters.AddWithValue("@MenuChoiceId", reservation.MenuChoiceId);
 
                 mySqlCmd.ExecuteNonQuery();
 
-                if (reservation.id == 0)
+                if (reservation.Id == 0)
                 {
                     // Si c'était un nouveau produit (requête INSERT),
                     // nous affectons le nouvel Id de l'instance au cas où il serait utilisé dans le code appelant.
-                    reservation.id = (int)mySqlCmd.LastInsertedId;
+                    reservation.Id = (int)mySqlCmd.LastInsertedId;
                 }
             }
             finally
