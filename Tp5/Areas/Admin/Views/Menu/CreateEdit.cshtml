@@ -1,27 +1,31 @@
 ﻿@model CreateEditMenuViewModel
 @{
+    ViewData["Title"] = @Resource.NewMenuTitleAdmin;
     string textAction = "Ajouter";
     string formAction = "Create";
+    string pageAction = @Resource.NewMenuTitleAdmin;
 
     if (Model.Menu.id > 0)
     {
+        ViewData["Title"] = @Resource.ModifMenuTitle;
         textAction = "Modifier";
         formAction = "Edit";
+        pageAction = @Resource.ModifMenuTitle;
     }
 
     //if(Model.Menu.id)
 
-    ViewData["Title"] = textAction + " un produit";
+
 }
 
 <div class="row">
     <div class="offset-md-1 offset-lg-2 col-md-10 col-lg-8">
         <div class="page-title">
-            <h2> <i class="far fa-list-alt"></i> @textAction un choix de menu</h2>
+            <h2> <i class="far fa-list-alt"></i> @pageAction</h2>
         </div>
 
         <div class="form-section">
-            <form asp-action="@formAction">
+            <form asp-action="@formAction" enctype="multipart/form-data">
                 <input type="hidden" asp-for="Menu.id" />
 
                 <div class="form-horizontal">
@@ -34,6 +38,26 @@
                             <span asp-validation-for="Menu.nom" class="text-danger"></span>
                         </div>
                     </div>
+                    @{
+                        if(textAction == "Modifier")
+                        {
+                            <div class = "col-md-5 d-none d-md-block">
+                            @{
+                                string path = Model.Menu.ImagePath;
+                            }
+                            <img src="~/img/@path" alt="Good">
+                            </div> 
+                        }                       
+                    }
+                     <div class="form-group row">
+                            <label for="uploadfile" class="col-form-label col-md-3">@Resource.Image</label>
+                            <div class="col-md-9">
+                                <input type="file" id="uploadfile" name="uploadfile" accept=".jpg,.png,.gif" />
+                                <div>
+                                    <span asp-validation-for="Menu.ImagePath" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <hr />
 
@@ -44,7 +68,7 @@
         </div>
 
         <div class="links">
-            <a asp-action="List">Retour à la liste des choix de menu</a>
+            <a asp-action="List">@Resource.ButtonReturnToList</a>
         </div>
     </div>
 </div>

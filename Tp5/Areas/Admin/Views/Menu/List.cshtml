@@ -1,11 +1,11 @@
 ﻿@model ListMenuViewModel
 @{
-    ViewData["Title"] = "Liste des menus";
+    ViewData["Title"] = @Resource.ListMenuAdminWeb;
 }
 
 <div id="product-list-page">
     <div class="page-title">
-        <h2><i class="far fa-list-alt"></i>Liste des choix de menu</h2>
+        <h2><i class="far fa-list-alt"></i>@Resource.ListMenuAdminWeb</h2>
     </div>
 
     <table class="table table-sm table-bordered table-striped table-hover">
@@ -31,11 +31,11 @@
         else
         {
             <tr>
-                <td colspan="5">Aucun menu trouvé.</td>
+                <td colspan="5">@Resource.NoMenuFound</td>
             </tr>
         }
     </table>
-    <a asp-action="Create" class="navbar-brand">Ajouter un choix de menu</a>
+    <a asp-action="Create" class="navbar-brand">@Resource.ButtonNewMenuChoice</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

@@ -1,13 +1,13 @@
 ﻿@model ListViewModel
 @{
 
-    ViewData["Title"] = "Nouvelle réservation";
+    ViewData["Title"] =  @Resource.NewReservationWeb;
 }
 
 <div>
     <div class="row">
         <div class="page-title">
-            <h2>Ajout d'une réservation</h2>
+            <h2>@Resource.TitleReservation</h2>
         </div>
     </div>
     <div class="row">
@@ -24,26 +24,44 @@
                             <hr />
                             <!--<div asp-validation-summary="ModelOnly" class="text-danger"></div>-->
                             <div class="form-group row">
-                                <label asp-for="Reservation.Nom" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.Nom" class="col-form-label col-md-3">@Resource.Name</label>
                                 <div class="col-md-9">
-                                    <input asp-for="Reservation.Nom" class="form-control" />
+                                @{
+                                    if(User.Identity.IsAuthenticated)
+                                    {
+                                    <input asp-for="Reservation.Nom" class="form-control" value=@Model.Member.Name/>
+                                    }
+                                    else
+                                    {
+                                        <input asp-for="Reservation.Nom" class="form-control"/>
+                                    }
+                                }
                                     <span asp-validation-for="Reservation.Nom" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.Courriel" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.Courriel" class="col-form-label col-md-3">@Resource.Email</label>
                                 <div class="col-md-9">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">@@</span>
                                         </div>
-                                        <input type="text" class="form-control" asp-for="Reservation.Courriel">
+                                        @{
+                                            if(User.Identity.IsAuthenticated)
+                                            {
+                                                <input type="text" class="form-control" asp-for="Reservation.Courriel" value=@Model.Member.Email/>
+                                            }
+                                            else
+                                            {
+                                                <input type="text" class="form-control" asp-for="Reservation.Courriel">
+                                            }
+                                        }
                                     </div>
                                     <span asp-validation-for="Reservation.Courriel" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.NbPersonne" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.NbPersonne" class="col-form-label col-md-3">@Resource.NumberReservation</label>
                                 <div class="col-md-9">
                                     <input asp-for="Reservation.NbPersonne" id="spinner" />
                                     <span asp-validation-for="Reservation.NbPersonne" class="text-danger"></span>
@@ -57,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label asp-for="Reservation.MenuChoiceId" class="col-form-label col-md-3"></label>
+                                <label asp-for="Reservation.MenuChoiceId" class="col-form-label col-md-3">@Resource.MenuChoiceId</label>
                                 <div class="col-md-9">
                                     <input asp-for="Reservation.MenuChoiceId" id="spinner" />
                                     <span asp-validation-for="Reservation.MenuChoiceId" class="text-danger"></span>
@@ -66,7 +84,7 @@
                             <hr />
                         </div>
                         <div class="text-center">
-                            <input type="submit" value="Confirmer la réservation" class="btn btn-primary" />
+                            <input type="submit" value=@Resource.ReservationConfirm class="btn btn-primary" />
                         </div>
                     </form>
             </div>         

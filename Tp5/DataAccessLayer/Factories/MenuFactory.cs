@@ -14,13 +14,14 @@ namespace Tp5.DataAccessLayer.Factories
         {
             int id = (int)mySqlDataReader["Id"];
             string nom = mySqlDataReader["Description"].ToString();
+            string imagePath = mySqlDataReader["ImagePath"].ToString();
 
-            return new Menu(id,nom);
+            return new Menu(id,nom,imagePath);
         }
 
         public Menu CreateEmpty()
         {
-            return new Menu(0, string.Empty);
+            return new Menu(0, string.Empty, string.Empty);
         }
 
         public Menu[] GetAll()
@@ -95,13 +96,13 @@ namespace Tp5.DataAccessLayer.Factories
                 {
                     // On sait que c'est un nouveau produit avec Id == 0,
                     // car c'est ce que nous avons affecter dans la fonction CreateEmpty().
-                    mySqlCmd.CommandText = "INSERT INTO tp5_menuchoices(Description) " +
-                                           "VALUES (@Description)";
+                    mySqlCmd.CommandText = "INSERT INTO tp5_menuchoices(Description,ImagePath) " +
+                                           "VALUES (@Description,@ImagePath)";
                 }
                 else
                 {
                     mySqlCmd.CommandText = "UPDATE tp5_menuchoices " +
-                                           "SET Id=@Id, Description=@Description " +
+                                           "SET Id=@Id, Description=@Description, ImagePath=@ImagePath " +
                                            "WHERE Id=@Id";
                     mySqlCmd.Parameters.AddWithValue("@Id", menu.id);
                     
@@ -109,6 +110,7 @@ namespace Tp5.DataAccessLayer.Factories
                 if(menu.nom != null)
                 {
                     mySqlCmd.Parameters.AddWithValue("@Description", menu.nom.Trim());
+                    mySqlCmd.Parameters.AddWithValue("@ImagePath", menu.ImagePath);
                     mySqlCmd.ExecuteNonQuery();
                 }
                

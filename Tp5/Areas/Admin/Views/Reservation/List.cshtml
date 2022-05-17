@@ -1,11 +1,11 @@
 ﻿@model ListReservationViewModel
 @{
-    ViewData["Title"] = "Liste des reservations";
+    ViewData["Title"] = @Resource.ListReservationTitle;
 }
 
 <div id="product-list-page">
     <div class="page-title">
-        <h2>Liste des reservations</h2>
+        <h2>@Resource.ListReservationTitle</h2>
     </div>
 
     <table class="table table-sm table-bordered table-striped table-hover">
@@ -46,7 +46,7 @@
         else
         {
             <tr>
-                <td colspan="5">Aucune reservation trouvée.</td>
+                <td colspan="5">@Resource.NoReservationFound</td>
             </tr>
         }
     </table>

@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Tp5.Areas.Admin.ViewModels;
@@ -41,9 +43,9 @@ namespace Tp5.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(CreateEditMenuViewModel viewModel)
+        public IActionResult Create(CreateEditMenuViewModel viewModel, IFormFile uploadFile)
         {
-            if (viewModel != null && viewModel.Menu != null)
+            if (viewModel != null && viewModel.Menu != null )
             {
                 DAL dal = new DAL();
 
@@ -56,7 +58,19 @@ namespace Tp5.Areas.Admin.Controllers
                     viewModel.Menus = dal.MenuFactory.GetAll();
                     return View("CreateEdit", viewModel);
                 }
+                else if (uploadFile != null && uploadFile.Length > 0)
+                {
+                    string extension = Path.GetExtension(uploadFile.FileName).ToLower();
+                    string filename = String.Format("{0}{1}", Guid.NewGuid().ToString(), extension);
 
+                    string pathToSave = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\", filename);
+
+                    using FileStream stream = System.IO.File.Create(pathToSave);
+                    uploadFile.CopyTo(stream);
+
+                    viewModel.Menu.ImagePath = filename;
+                    ModelState["Menu.ImagePath"].ValidationState = ModelValidationState.Valid;
+                }
                 // Si le modèle n'est pas valide, on retourne à la vue CreateEdit où les messages seront affichés.
                 // Le ViewModèle reçu en POST n'est pas complet (seulement les info dans le <form> sont conservées),
                 // il faut donc réaffecter les Catégories.
@@ -96,7 +110,7 @@ namespace Tp5.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, CreateEditMenuViewModel viewModel)
+        public IActionResult Edit(int id, CreateEditMenuViewModel viewModel, IFormFile uploadFile)
         {
             if (viewModel != null && viewModel.Menu != null)
             {
@@ -111,7 +125,19 @@ namespace Tp5.Areas.Admin.Controllers
                     viewModel.Menus = dal.MenuFactory.GetAll();
                     return View("CreateEdit", viewModel);
                 }
+                else if (uploadFile != null && uploadFile.Length > 0)
+                {
+                    string extension = Path.GetExtension(uploadFile.FileName).ToLower();
+                    string filename = String.Format("{0}{1}", Guid.NewGuid().ToString(), extension);
 
+                    string pathToSave = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\", filename);
+
+                    using FileStream stream = System.IO.File.Create(pathToSave);
+                    uploadFile.CopyTo(stream);
+
+                    viewModel.Menu.ImagePath = filename;
+                    ModelState["Menu.ImagePath"].ValidationState = ModelValidationState.Valid;
+                }
                 // Si le modèle n'est pas valide, on retourne à la vue CreateEdit où les messages seront affichés.
                 // Le ViewModèle reçu en POST n'est pas complet (seulement les info dans le <form> sont conservées),
                 // il faut donc réaffecter les Catégories.

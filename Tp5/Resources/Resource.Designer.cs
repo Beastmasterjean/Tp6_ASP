@@ -19,7 +19,7 @@ namespace Tp5.Resources {
     // à l'aide d'un outil, tel que ResGen ou Visual Studio.
     // Pour ajouter ou supprimer un membre, modifiez votre fichier .ResX, puis réexécutez ResGen
     // avec l'option /str ou régénérez votre projet VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resource {
@@ -142,6 +142,15 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Retour à la page d&apos;accueil.
+        /// </summary>
+        public static string ButtonReturnHome {
+            get {
+                return ResourceManager.GetString("ButtonReturnHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Retour à la liste de réservations.
         /// </summary>
         public static string ButtonReturnListReservation {
@@ -232,11 +241,29 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Identification.
         /// </summary>
         public static string Identification {
             get {
                 return ResourceManager.GetString("Identification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Image.
+        /// </summary>
+        public static string Image {
+            get {
+                return ResourceManager.GetString("Image", resourceCulture);
             }
         }
         
@@ -259,6 +286,15 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à fr.
+        /// </summary>
+        public static string LangISOCode {
+            get {
+                return ResourceManager.GetString("LangISOCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Liste des menus.
         /// </summary>
         public static string ListMenuAdminWeb {
@@ -268,7 +304,7 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Lite des reservations.
+        ///   Recherche une chaîne localisée semblable à Liste des reservations.
         /// </summary>
         public static string ListReservationTitle {
             get {
@@ -304,7 +340,7 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à ModelLengthBetween.
+        ///   Recherche une chaîne localisée semblable à Il faut entre 1 et 50 caractères.
         /// </summary>
         public static string ModelLengthBetween {
             get {
@@ -313,7 +349,7 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à ModelLengthLessThan.
+        ///   Recherche une chaîne localisée semblable à Il faut plus que 1 caractère.
         /// </summary>
         public static string ModelLengthLessThan {
             get {
@@ -412,6 +448,24 @@ namespace Tp5.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Aucun menu trouvé.
+        /// </summary>
+        public static string NoMenuFound {
+            get {
+                return ResourceManager.GetString("NoMenuFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Aucune reservation trouvé.
+        /// </summary>
+        public static string NoReservationFound {
+            get {
+                return ResourceManager.GetString("NoReservationFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Nombre de personne :.
         /// </summary>
         public static string NumberReservation {
@@ -426,6 +480,33 @@ namespace Tp5.Resources {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Réservation complétée avec succès.
+        /// </summary>
+        public static string ReservationCompleted {
+            get {
+                return ResourceManager.GetString("ReservationCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Confirmer la reservation.
+        /// </summary>
+        public static string ReservationConfirm {
+            get {
+                return ResourceManager.GetString("ReservationConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Détails des informations.
+        /// </summary>
+        public static string ReservationDetailsTitle {
+            get {
+                return ResourceManager.GetString("ReservationDetailsTitle", resourceCulture);
             }
         }
         
@@ -453,6 +534,33 @@ namespace Tp5.Resources {
         public static string SignOut {
             get {
                 return ResourceManager.GetString("SignOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à L&apos;équipe.
+        /// </summary>
+        public static string Team {
+            get {
+                return ResourceManager.GetString("Team", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Merci d&apos;avoir utiliser notre module de réservation en ligne..
+        /// </summary>
+        public static string ThanksMessage1 {
+            get {
+                return ResourceManager.GetString("ThanksMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Au plaisir de vous voir bientôt.
+        /// </summary>
+        public static string ThanksMessage2 {
+            get {
+                return ResourceManager.GetString("ThanksMessage2", resourceCulture);
             }
         }
         

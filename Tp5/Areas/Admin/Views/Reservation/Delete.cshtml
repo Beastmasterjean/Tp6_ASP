@@ -1,12 +1,12 @@
 ﻿@model ListReservationViewModel
 @{
-    ViewData["Title"] = "Delete une reservation";
+    ViewData["Title"] = @Resource.DeleteReservationTitle;
 }
 
 <div class="row">
     <div class="offset-md-1 offset-lg-2 col-md-10 col-lg-8">
         <div class="page-title">
-            <h2> <i class="fas fa-user"></i> Supprimer une réservation</h2>
+            <h2> <i class="fas fa-user"></i> @Resource.DeleteReservationTitle</h2>
         </div>
 
         <div class="row details-row">
@@ -26,10 +26,10 @@
             <div class="col-sm-6">@Html.DisplayFor(model => model.Reservation.Date)</div>
         </div>
         <form asp-action="Delete">
-            <input type="submit" value="Supprimer" class="btn btn-danger" />
+            <input type="submit" value=@Resource.ButtonDelete class="btn btn-danger" />
         </form>
         <div class="links">
-            <a asp-action="List">Retour à la page d'accueil</a>
+            <a asp-action="List">@Resource.ButtonReturnListReservation</a>
         </div>
     </div>
 

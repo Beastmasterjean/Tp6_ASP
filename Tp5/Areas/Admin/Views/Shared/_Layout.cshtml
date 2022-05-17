@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="fr">
+<html lang="@Resource.LangISOCode">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,6 +49,10 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
+                <div class="languages">
+                    <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-lang="fr" asp-route-returnurl="@Context.Request.Path">Français</a> |
+                    <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-lang="en" asp-route-returnurl="@Context.Request.Path">English</a>
+                </div>
             ASP.NET MVC - JeanLandreville
             <a asp-area="" asp-controller="Home" asp-action="Index">Client</a>
         </div>

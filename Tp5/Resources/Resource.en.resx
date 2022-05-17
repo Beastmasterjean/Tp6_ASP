@@ -118,61 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AccessDeniedChangeUserMsg" xml:space="preserve">
-    <value>L'accès vous est interdit</value>
+    <value>Acces was denied for you</value>
   </data>
   <data name="AccessDeniedMsg" xml:space="preserve">
-    <value>Accès refusé</value>
+    <value>Acces Denied</value>
   </data>
   <data name="AdminIndexWeb" xml:space="preserve">
-    <value>Accueil Admin</value>
+    <value>Admin's home</value>
   </data>
   <data name="BackToHomepage" xml:space="preserve">
-    <value>Retour à la page d'acceuil</value>
+    <value>Return to home page</value>
   </data>
   <data name="BackToLoginPage" xml:space="preserve">
-    <value>Retour vers la page de connexion</value>
+    <value>Return to login page</value>
   </data>
   <data name="ButtonAdd" xml:space="preserve">
-    <value>Ajouter</value>
+    <value>Add</value>
   </data>
   <data name="ButtonDelete" xml:space="preserve">
-    <value>Supprimer</value>
+    <value>Delete</value>
   </data>
   <data name="ButtonModif" xml:space="preserve">
-    <value>Modifier</value>
+    <value>Modify</value>
   </data>
   <data name="ButtonNewMenuChoice" xml:space="preserve">
-    <value>Ajouter un choix de menu</value>
+    <value>Add a menu choice</value>
   </data>
   <data name="ButtonReturnHome" xml:space="preserve">
-    <value>Retour à la page d'accueil</value>
+    <value>Return home</value>
   </data>
   <data name="ButtonReturnListReservation" xml:space="preserve">
-    <value>Retour à la liste de réservations</value>
+    <value>Return to the reservations list</value>
   </data>
   <data name="ButtonReturnToList" xml:space="preserve">
-    <value>Retour à la liste des choix de menu</value>
+    <value>Return to the menu choice page</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Créer</value>
+    <value>Create</value>
   </data>
   <data name="CreateNewAccount" xml:space="preserve">
-    <value>Créer un nouveau compte</value>
+    <value>Create a new account</value>
   </data>
   <data name="DeleteMenuQuestion" xml:space="preserve">
-    <value>Êtes-vous certain de vouloir supprimer ce menu?</value>
+    <value>Are you sure to delete thi menu</value>
   </data>
   <data name="DeleteMenuTitle" xml:space="preserve">
-    <value>Supprimer un choix de menu</value>
+    <value>Delete a menu</value>
   </data>
   <data name="DeleteMenuWeb" xml:space="preserve">
-    <value>Supprimer un menu</value>
+    <value>Delete a menu</value>
   </data>
   <data name="DeleteReservationTitle" xml:space="preserve">
-    <value>Supprimer une réservation</value>
+    <value>Delete a reservation</value>
   </data>
   <data name="E-Mail" xml:space="preserve">
-    <value>Courriel :</value>
+    <value>Email</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -190,123 +190,123 @@
     <value>Model invalid</value>
   </data>
   <data name="InvalidUsernamePassword" xml:space="preserve">
-    <value>Le mot de passe est invalide</value>
+    <value>The password is invalid</value>
   </data>
   <data name="LangISOCode" xml:space="preserve">
-    <value>fr</value>
+    <value>en</value>
   </data>
   <data name="ListMenuAdminWeb" xml:space="preserve">
-    <value>Liste des menus</value>
+    <value>Menus list</value>
   </data>
   <data name="ListReservationTitle" xml:space="preserve">
-    <value>Liste des reservations</value>
+    <value>Reservations list</value>
   </data>
   <data name="MemberList" xml:space="preserve">
-    <value>Liste des membres</value>
+    <value>Members list</value>
   </data>
   <data name="MenuChoiceId" xml:space="preserve">
-    <value>Choix de menu :</value>
+    <value>Menu choice :</value>
   </data>
   <data name="MenuChoiceIndexAdmin" xml:space="preserve">
-    <value>LES CHOIX DE MENU</value>
+    <value>THE MENU CHOICES</value>
   </data>
   <data name="ModelLengthBetween" xml:space="preserve">
-    <value>Il faut entre 1 et 50 caractères</value>
+    <value>Model Length Between 1 and 50 needed</value>
   </data>
   <data name="ModelLengthLessThan" xml:space="preserve">
-    <value>Il faut plus que 1 caractère</value>
+    <value>Model Length Less Than 1</value>
   </data>
   <data name="ModelRequired" xml:space="preserve">
-    <value>Model requis</value>
+    <value>Model required</value>
   </data>
   <data name="ModifMenuTitle" xml:space="preserve">
-    <value>Modifier un choix de menu</value>
+    <value>Modify a menu</value>
   </data>
   <data name="ModifMenuWeb" xml:space="preserve">
-    <value>Modifier un menu</value>
+    <value>Modify a menu</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Nom</value>
+    <value>Name</value>
   </data>
   <data name="NameClient" xml:space="preserve">
-    <value>Nom :</value>
+    <value>Name :</value>
   </data>
   <data name="NavReservation" xml:space="preserve">
-    <value>RÉSERVATION EN LIGNE</value>
+    <value>ONLINE RESERVATION</value>
   </data>
   <data name="NewMenuAdminWeb" xml:space="preserve">
-    <value>Ajouter un menu</value>
+    <value>Add a menu</value>
   </data>
   <data name="NewMenuTitleAdmin" xml:space="preserve">
-    <value>Ajouter un choix de menu</value>
+    <value>Add a menu choice</value>
   </data>
   <data name="NewReservationWeb" xml:space="preserve">
-    <value>Nouvelle réservation</value>
+    <value>New reservation</value>
   </data>
   <data name="NoItemFound" xml:space="preserve">
-    <value>Aucun membre n'a été trouvé</value>
+    <value>No member found</value>
   </data>
   <data name="NoMenuFound" xml:space="preserve">
-    <value>Aucun menu trouvé</value>
+    <value>No menu found</value>
   </data>
   <data name="NoReservationFound" xml:space="preserve">
-    <value>Aucune reservation trouvé</value>
+    <value>No reservation found</value>
   </data>
   <data name="NumberReservation" xml:space="preserve">
-    <value>Nombre de personne :</value>
+    <value>Number of people :</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Mot de passe</value>
+    <value>Password</value>
   </data>
   <data name="ReservationCompleted" xml:space="preserve">
-    <value>Réservation complétée avec succès</value>
+    <value>Reservation completed</value>
   </data>
   <data name="ReservationConfirm" xml:space="preserve">
-    <value>Confirmer la reservation</value>
+    <value>Confirm reservation</value>
   </data>
   <data name="ReservationDetailsTitle" xml:space="preserve">
-    <value>Détails des informations</value>
+    <value>Informations details</value>
   </data>
   <data name="ReservationIndexAdmin" xml:space="preserve">
-    <value>LES RÉSERVATIONS</value>
+    <value>THE RESERVATIONS</value>
   </data>
   <data name="SignIn" xml:space="preserve">
-    <value>Se connecter</value>
+    <value>Sign in</value>
   </data>
   <data name="SignOut" xml:space="preserve">
-    <value>Se déconnecter</value>
+    <value>Sign out</value>
   </data>
   <data name="Team" xml:space="preserve">
-    <value>L'équipe</value>
+    <value>The team</value>
   </data>
   <data name="ThanksMessage1" xml:space="preserve">
-    <value>Merci d'avoir utiliser notre module de réservation en ligne.</value>
+    <value>Thanks to use our online reservation service</value>
   </data>
   <data name="ThanksMessage2" xml:space="preserve">
-    <value>Au plaisir de vous voir bientôt</value>
+    <value>We hope to see you again</value>
   </data>
   <data name="TitleListMenuAdmin" xml:space="preserve">
-    <value>LES CHOIX DE MENU</value>
+    <value>MENU CHOICES</value>
   </data>
   <data name="TitleReservation" xml:space="preserve">
-    <value>Ajout d'une réservation</value>
+    <value>Add a reservation</value>
   </data>
   <data name="Username" xml:space="preserve">
-    <value>nom d'utilisateur</value>
+    <value>Username</value>
   </data>
   <data name="WarningIdDuplicate" xml:space="preserve">
-    <value>Le id de menu existe déjà.</value>
+    <value>This id already exist</value>
   </data>
   <data name="WarningIdNotFound" xml:space="preserve">
-    <value>L'identifiant de la reservation est introuvable.</value>
+    <value>The identification of the reservation not found</value>
   </data>
   <data name="WarningNeddMail" xml:space="preserve">
-    <value>Un courriel est requis</value>
+    <value>A email is required</value>
   </data>
   <data name="WarningNeedName" xml:space="preserve">
-    <value>Un nom est requis</value>
+    <value>A name is required</value>
   </data>
   <data name="WarningNeedNumber" xml:space="preserve">
-    <value>Le nombre de client doit être de plus de 0</value>
+    <value>The number of clients need to be more than 0</value>
   </data>
 </root>

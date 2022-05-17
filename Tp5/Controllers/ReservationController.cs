@@ -11,12 +11,15 @@ namespace Tp5.Controllers
         {
             DAL dal = new DAL();
             Reservation reservation = dal.reservationFactory.Get(id);
+    
+            Menu menu = dal.MenuFactory.Get(reservation.MenuChoiceId);
 
             if(reservation != null)
             {
                 DetailsViewModel viewModel = new DetailsViewModel
                 {
                     Reservation = reservation,
+                    Menu = menu,
                 };
 
                 return View(viewModel);

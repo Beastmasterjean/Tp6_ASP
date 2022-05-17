@@ -23,14 +23,11 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <h1> @Resource.NavReservation</h1>
+                <h1> Login </h1>
                 <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                     <ul class="navbar-nav ml-auto">
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@Resource.Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <partial name="PartialLoginMenu" />
                         </li>
                     </ul>
                 </div>
@@ -45,11 +42,13 @@
 
 
     <footer class="border-top text-center bg-dark text-white footer">
-        <div class="languages container-fluid">
-                                ASP.NET MVC - JeanLandreville
+        <div class="container-fluid">
+                <div class="languages">
                     <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-lang="fr" asp-route-returnurl="@Context.Request.Path">Français</a> |
                     <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-lang="en" asp-route-returnurl="@Context.Request.Path">English</a>
                 </div>
+            ASP.NET MVC - JeanLandreville
+        </div>
     </footer>
 
     <!-- Placé à la fin du document pour un chargement plus rapide des pages -->

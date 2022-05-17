@@ -6,5 +6,7 @@ namespace Tp5.ViewModel
     {
         public Reservation Reservation { get; set; }
         public Reservation[] Reservations { get; set; }
+
+        public Menu Menu { get; set; }
     }
 }

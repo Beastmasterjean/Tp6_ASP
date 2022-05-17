@@ -16,10 +16,16 @@ namespace Tp5.Controllers
         public IActionResult Index()
         {
             DAL dal = new DAL();
+            Member member = new Member();
+            if (User.Identity.IsAuthenticated)
+            {
+                member = new DAL().memberFactory.GetByUsername(User.Identity.Name.ToString());
+            }
 
-            ListViewModel viewModel = new ListViewModel()
+    ListViewModel viewModel = new ListViewModel()
             {
                 Reservation = dal.reservationFactory.CreateEmpty(),
+                Member = member,
             };
 
             return View("Index", viewModel);
@@ -38,7 +44,7 @@ namespace Tp5.Controllers
                 {
                     // Il est possible d'ajouter une erreur personnalisée.
                     // Le premier paramètre est la propriété touchée (à partir du viewModel ici)
-                    ModelState.AddModelError("Menu.Id", "Le id de menu existe déjà.");
+                    ModelState.AddModelError("Menu.Id", "Le id de reservation existe déjà.");
                     viewModel.Reservations = dal.reservationFactory.GetAll();
                     return View("Index", viewModel);
                 }
@@ -55,7 +61,7 @@ namespace Tp5.Controllers
                 dal.reservationFactory.Save(viewModel.Reservation);
             }
 
-            return RedirectToAction("Details", "Reservation");
+            return RedirectToAction("Details", "Reservation", new { @id = viewModel.Reservation.Id });
         }
     }
 }
